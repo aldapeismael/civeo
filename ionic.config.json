@@ -1,0 +1,8 @@
+{
+  "name": "Civeo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "25f92078"
+}
