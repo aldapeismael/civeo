@@ -17,11 +17,35 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  // color: #8c8c8c;
 
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.inicio{
+  display: flex;
+  justify-content: center;
+}
+
+.Centrar10{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.Centrar15{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+// ion-input{
+//   --background: rgb(255, 255, 255);
+// }
+
+::placeholder {
+  text-align: center; 
+}
+.text-input {
+  text-align: center;
 }

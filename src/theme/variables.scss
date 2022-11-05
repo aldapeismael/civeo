@@ -151,6 +151,10 @@
    * iOS Dark Theme
    * -------------------------------------------
    */
+  
+  ion-content{
+    --ion-background-color:#4b864f;
+  }
 
   .ios body {
     --ion-background-color: #000000;
