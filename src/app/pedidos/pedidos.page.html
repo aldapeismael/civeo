@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pedidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col># Pedido</ion-col>
+      <ion-col>Estatus</ion-col>
+      <ion-col>Fecha</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let row of listaPedidos;">
+      <ion-col><span [routerLink]="'/consulta/' + row.PedidoEstatusDetalleId">{{ row.pedidoId }}</span> </ion-col>
+      <ion-col>{{ row.descripcionEstatus }}</ion-col>
+      <ion-col>{{ row.fechaPedido | date:'dd-MM-yyyy'}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

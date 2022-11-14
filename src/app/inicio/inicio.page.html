@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Civeo APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div class="inicio"> 
+        <div style="width: 40% !important;">
+          <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="Centrar10">
+      <strong>¿Cómo rastrear tu pedido de tus lentes en CIVEO APP?</strong>
+    </div>
+    <br>
+    <br>
+    <div class="Centrar15">
+      <p>&#9312; Ingresa tu número de télefono</p>
+      <p>&#9312; Monitorea constantemente esta aplicación para conocer el estatus de tus lentes</p>
+    </div>
+    <br>
+    <div class="Centrar15">
+      <ion-item style="text-align: center !important;">
+        <ion-input [(ngModel)]="obj_Inicio.telefono" placeholder="Ingresa tu número aqui"></ion-input> 
+      </ion-item>
+    </div>
+    <div>
+      <ion-item style="text-align: center !important; display: grid;">
+        <ion-button [routerLink]="['/pedidos/' + obj_Inicio.telefono]">Consultar</ion-button>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
