@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
       <ion-buttons slot="start">
-          <ion-back-button [routerLink]="'/pedidos/'"></ion-back-button>
+          <ion-back-button [routerLink]="'/pedidos/' + obj_PedidoDetalle.telefono"></ion-back-button>
       </ion-buttons>
       <ion-title>Detalle del pedido</ion-title>
   </ion-toolbar>
@@ -81,7 +81,7 @@
       </ion-row>
       <ion-row>
           <ion-col style="text-align: center;">
-              <a href="8181818181">Ponte en contacto con nosotros</a>
+              <a href="tel:8181818181">Ponte en contacto con nosotros</a>
           </ion-col>
       </ion-row>
   </ion-grid>

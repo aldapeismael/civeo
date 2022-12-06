@@ -3,5 +3,6 @@ export class PedidoDetalleViewModel {
     nombreEmpresa: string = "";
     direccionEmpresa: string = "";
     estatusId: number = 0;
+    telefono: string = "";
     constructor(){}
 }
