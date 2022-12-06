@@ -1,13 +1,21 @@
-ion-content{
-    --ion-background-color:#ac89b3;
-}
-.IconoTimeLine{
-    text-align: center !important; font-size: 40px;
+ion-content {
+    --ion-background-color: rgb(65, 134, 188);
+    --ion-background-color: linear-gradient(90deg, rgba(65, 134, 188, 1) 20%, rgba(123, 107, 160, 1) 80%);
 }
 
-.colorGris{
+.IconoTimeLine {
+    text-align: center !important;
+    font-size: 40px;
+}
+
+.colorGris {
     color: gray;
 }
-.colorVerde{
-    color: green;
+
+.colorVerde {
+    color: rgb(21, 197, 21);
+}
+
+a {
+    color: white;
 }

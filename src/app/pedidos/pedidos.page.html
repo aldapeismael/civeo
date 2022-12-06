@@ -1,21 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Pedidos</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button [routerLink]="'/inicio/'"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <br>
-  <ion-grid class="generica">
-    <ion-row>
-      <ion-col># Pedido</ion-col>
-      <ion-col>Estatus</ion-col>
-      <ion-col>Fecha</ion-col>
-    </ion-row>
-    <ion-row *ngFor="let row of listaPedidos;">
-      <ion-col><span [routerLink]="'/consulta/' + row.PedidoEstatusDetalleId">{{ row.pedidoId }}</span> </ion-col>
-      <ion-col>{{ row.descripcionEstatus }}</ion-col>
-      <ion-col>{{ row.fechaPedido | date:'dd-MM-yyyy'}}</ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="container">
+      <div class="inicio">
+          <div class="containerImage">
+              <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
+          </div>
+      </div>
+      <div class="containerGrid">
+          <ion-grid class="grid">
+              <div class="gridText">
+                  Hola, {{ name }}
+              </div>
+              <div class="gridText">
+                  Aqui encontraras tus pedidos con su detalle. Haz Clic en el pedido que quieres consultar.
+              </div>
+              <ion-row class="Tit">
+                  <ion-col># Pedido</ion-col>
+                  <ion-col>Estatus</ion-col>
+                  <ion-col>Fecha</ion-col>
+                  <ion-col>Acción</ion-col>
+              </ion-row>
+              <ion-row *ngFor="let row of listaPedidos;">
+                  <ion-col><span>{{ row.pedidoId }}</span> </ion-col>
+                  <ion-col>{{ row.descripcionEstatus }}</ion-col>
+                  <ion-col>{{ row.fechaPedido | date:'dd-MM-yyyy'}}</ion-col>
+                  <ion-col>
+                      <ion-button [routerLink]="'/consulta/' + row.PedidoEstatusDetalleId">
+                          >
+                      </ion-button>
+                  </ion-col>
+
+              </ion-row>
+          </ion-grid>
+      </div>
+  </div>
 </ion-content>
