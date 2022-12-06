@@ -18,4 +18,8 @@ export class PedidoService {
     // return this.http.get(environment.apiURL + 'Plaza/MiPlantilla/?);
     return this.http.get(environment.apiURL + 'Clientes/getPedido?detalleId='+ int_DetalleId);
   }
+
+  fn_ObtenerDatosCliente(str_Telefono:string) {
+    return this.http.get(environment.apiURL + 'Clientes/getDatosCliente?telefono='+ str_Telefono);
+  }
 }

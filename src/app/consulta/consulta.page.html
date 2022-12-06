@@ -24,15 +24,15 @@
     <br>
     <ion-row>
       <ion-col>
-        <div class="IconoTimeLine" [ngClass]="">
+        <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 1}">
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
         <div style="text-align: center !important;">
-          En&nbsp;construccion
+          En&nbsp;construcción
         </div>
       </ion-col>
       <ion-col>
-        <div class="IconoTimeLine">
+        <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 2}">
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
         <div style="text-align: center !important;">
@@ -40,7 +40,7 @@
         </div>
       </ion-col>
       <ion-col>
-        <div class="IconoTimeLine">
+        <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 4}">
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
         <div style="text-align: center !important;">

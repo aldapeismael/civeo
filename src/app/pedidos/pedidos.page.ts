@@ -32,6 +32,15 @@ export class PedidosPage implements OnInit {
         },(error) => {
           console.log(error);
         });
+        this.fn_ObtenerDatosCliente();
+    });
+  }
+
+  fn_ObtenerDatosCliente(){
+    this.pedidoService.fn_ObtenerDatosCliente(this.str_Telefono).subscribe((res: any) => {
+      console.log(res);
+    },(error) => {
+      console.log(error);
     });
   }
 }
