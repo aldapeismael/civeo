@@ -4,5 +4,6 @@ export class PedidoDetalleViewModel {
     direccionEmpresa: string = "";
     estatusId: number = 0;
     telefono: string = "";
+    Guia: string = "";
     constructor(){}
 }
