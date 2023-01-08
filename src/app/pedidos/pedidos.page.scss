@@ -1,64 +1,85 @@
-ion-content {
-    --ion-background-color: rgb(65, 134, 188);
-    --ion-background-color: linear-gradient(90deg, rgba(65, 134, 188, 1) 20%, rgba(123, 107, 160, 1) 80%);
-}
-
-ion-header {
-    --background: transparent;
-}
-
-ion-toolbar {
-    --background: #a8a8a810;
-}
-
-.container {
-    position: absolute;
-    top: 5%;
-    .inicio {
-        margin-bottom: 10%;
-        display: flex;
-        justify-content: center;
-    }
-    .containerImage {
-        width: 50%;
-        img {
-            width: 20%;
+        ion-content {
+            --ion-background-color: rgb(65, 134, 188);
+            --ion-background-color: linear-gradient(90deg, rgba(65, 134, 188, 1) 20%, rgba(123, 107, 160, 1) 80%);
         }
-    }
-    .containerGrid {
-        width: 90%;
-        margin: 0 auto;
-        .grid {
-            margin-top: 30px;
-            .gridText {
-                margin-bottom: 30px;
+        
+        ion-header {
+            --background: transparent;
+        }
+        
+        ion-toolbar {
+            --background: #a8a8a810;
+        }
+        
+        .container {
+            position: absolute;
+            top: 5%;
+            .inicio {
+                margin-bottom: 10%;
+                display: flex;
+                justify-content: center;
+            }
+            .containerImage {
+                width: 50%;
+                img {
+                    width: 20%;
+                }
+            }
+            .containerGrid {
+                width: 90%;
+                margin: 0 auto;
+                .grid {
+                    margin-top: 30px;
+                    .gridText {
+                        margin-bottom: 30px;
+                    }
+                }
+                .Tit {
+                    border: 1px solid;
+                }
+                span {
+                    color: white;
+                }
+                ion-col {
+                    font-weight: bold;
+                    font-size: 13px;
+                    text-align: center;
+                }
+                ion-button {
+                    --background: #41b454b9;
+                    --background-hover: #6177ac;
+                    --background-activated: #4186bc;
+                    --background-focused: #4186bc;
+                    --color: white;
+                    --border-radius: 5px;
+                    --border-color: rgb(255, 255, 255);
+                    --border-style: solid;
+                    --border-width: 1px;
+                    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+                    --ripple-color: deeppink;
+                    --padding-top: 10px;
+                    --padding-bottom: 10px;
+                }
             }
         }
-        .Tit {
-            border: 1px solid;
+        
+        ion-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                p {
+                    font-size: 12px;
+                }
+                .powerby {
+                    font-size: 9px;
+                }
+            }
+            ion-img {
+                width: 80%;
+            }
         }
-        span {
-            color: white;
-        }
-        ion-col {
-            font-weight: bold;
-            font-size: 13px;
-            text-align: center;
-        }
-        ion-button {
-            --background: #41b454b9;
-            --background-hover: #6177ac;
-            --background-activated: #4186bc;
-            --background-focused: #4186bc;
-            --color: white;
-            --border-radius: 5px;
-            --border-color: rgb(255, 255, 255);
-            --border-style: solid;
-            --border-width: 1px;
-            --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
-            --ripple-color: deeppink;
-            --padding-top: 10px;
-            --padding-bottom: 10px;
-        }
-    }
-}

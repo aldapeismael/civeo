@@ -1,40 +1,59 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-      </ion-buttons>
-      <ion-title>Civeo</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+        </ion-buttons>
+        <ion-title>Civeo</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div id="container">
-      <div class="inicio">
-          <div class="containerImage">
-              <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
-          </div>
-      </div>
-      <div class="containerText">
-          <div class="text">
-              <strong>RASTREA EL PEDIDO DE TUS LENTES CIVEO</strong>
-          </div>
-          <br>
-          <br>
-          <div class="text">
-              <p>&#9312; Ingresa tu número de télefono.</p>
-              <p>&#9312; Monitorea constantemente esta aplicación para conocer el estatus de tus lentes.</p>
-          </div>
-      </div>
-      <br>
-      <br>
-      <div class="containerInputs">
-          <div>
-              <ion-item class="input inputTel">
-                  <ion-input [(ngModel)]="obj_Inicio.telefono" placeholder="Teléfono" type="number"></ion-input>
-              </ion-item>
-              <ion-item class="input">
-                  <ion-button color="dark" class="btn" fill="outline" [routerLink]="['/pedidos/' + obj_Inicio.telefono]">Consultar</ion-button>
-              </ion-item>
-          </div>
-      </div>
-  </div>
+    <div id="container">
+        <div class="inicio">
+            <div class="containerImage">
+                <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
+            </div>
+        </div>
+        <br>
+        <div class="containerText">
+            <div class="text">
+                <strong>¿Deseas rastrear tu pedido?</strong>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="containerInputs">
+            <div>
+                <ion-item class="input inputTel">
+                    <ion-input [(ngModel)]="obj_Inicio.telefono" placeholder="Teléfono" type="number"></ion-input>
+                </ion-item>
+                <ion-item class="input">
+                    <ion-button color="dark" class="btn" fill="outline" [routerLink]="['/pedidos/' + obj_Inicio.telefono]">Rastrear</ion-button>
+                </ion-item>
+            </div>
+        </div>
+        <div class="containerFooter">
+            <div class="containerRedes">
+                <div>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <p>Instagram</p>
+                </div>
+                <div>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <p>Facebook</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </ion-content>
+<ion-footer>
+    <div>
+        <p>
+            Copyright © 2022 Civeo
+        </p>
+    </div>
+    <div>
+        <p class="powerby">Power by</p>
+        <ion-img src="..\assets\images\LogoMeta.png" alt="Metahub"></ion-img>
+    </div>
+</ion-footer>

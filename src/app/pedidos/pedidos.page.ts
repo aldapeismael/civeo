@@ -27,7 +27,7 @@ export class PedidosPage implements OnInit {
     this.route.params.subscribe(params => {
       this.str_Telefono = params['id'];
         this.pedidoService.fn_ObtenerListaMiPlantilla(this.str_Telefono).subscribe((res: any[]) => {
-          console.log(res);
+          console.log(res);  
           this.listaPedidos = res;
         },(error) => {
           console.log(error);

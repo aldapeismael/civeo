@@ -1,45 +1,56 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button [routerLink]="'/inicio/'"></ion-back-button>
-      </ion-buttons>
-      <ion-title>Pedidos</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button [routerLink]="'/inicio/'"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Pedidos</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="container">
-      <div class="inicio">
-          <div class="containerImage">
-              <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
-          </div>
-      </div>
-      <div class="containerGrid">
-          <ion-grid class="grid">
-              <div class="gridText">
-                  Hola, {{ name }}
-              </div>
-              <div class="gridText">
-                  Aqui encontraras tus pedidos con su detalle. Haz Clic en el pedido que quieres consultar.
-              </div>
-              <ion-row class="Tit">
-                  <ion-col># Pedido</ion-col>
-                  <ion-col>Estatus</ion-col>
-                  <ion-col>Fecha</ion-col>
-                  <ion-col>Acción</ion-col>
-              </ion-row>
-              <ion-row *ngFor="let row of listaPedidos;">
-                  <ion-col><span>{{ row.pedidoId }}</span> </ion-col>
-                  <ion-col>{{ row.descripcionEstatus }}</ion-col>
-                  <ion-col>{{ row.fechaPedido | date:'dd-MM-yyyy'}}</ion-col>
-                  <ion-col>
-                      <ion-button [routerLink]="'/consulta/' + row.PedidoEstatusDetalleId">
-                          >
-                      </ion-button>
-                  </ion-col>
+    <div class="container">
+        <div class="inicio">
+            <div class="containerImage">
+                <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
+            </div>
+        </div>
+        <div class="containerGrid">
+            <ion-grid class="grid">
+                <div class="gridText">
+                    ¡Hola!, {{ name }}
+                </div>
+                <div class="gridText">
+                    Aqui encontraras tus pedidos con el detalle. Haz Clic en el pedido que quieres revisar.
+                </div>
+                <ion-row class="Tit">
+                    <ion-col># Pedido</ion-col>
+                    <ion-col>Estatus</ion-col>
+                    <ion-col>Fecha</ion-col>
+                    <ion-col>Acción</ion-col>
+                </ion-row>
+                <ion-row *ngFor="let row of listaPedidos;">
+                    <ion-col><span>{{ row.pedidoId }}</span> </ion-col>
+                    <ion-col>{{ row.descripcionEstatus }}</ion-col>
+                    <ion-col>{{ row.fechaPedido | date:'dd-MM-yyyy'}}</ion-col>
+                    <ion-col>
+                        <ion-button [routerLink]="'/consulta/' + row.PedidoEstatusDetalleId">
+                            >
+                        </ion-button>
+                    </ion-col>
 
-              </ion-row>
-          </ion-grid>
-      </div>
-  </div>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
 </ion-content>
+<ion-footer>
+    <div>
+        <p>
+            Copyright © 2022 Civeo
+        </p>
+    </div>
+    <div>
+        <p class="powerby">Power by</p>
+        <ion-img src="..\assets\images\LogoMeta.png" alt="Metahub"></ion-img>
+    </div>
+</ion-footer>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button [routerLink]="'/pedidos/' + obj_PedidoDetalle.telefono"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Detalle del pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br>
+  <ion-grid>
+      <ion-row>
+          <div style="width: 30% !important;">
+              <ion-img src="..\assets\images\CIVEOlogo.png" alt="Civeo Logo"></ion-img>
+          </div>
+      </ion-row>
+  </ion-grid>
+  <br>
+  <br>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <strong style="font-size: 22px;">Estatus del pedido #{{obj_PedidoDetalle.pedidoId}}</strong>
+          </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+          <ion-col>
+              <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 1}">
+                  <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              <div style="text-align: center !important;">
+                  En&nbsp;construcción
+              </div>
+          </ion-col>
+          <ion-col>
+              <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 2}">
+                  <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              <div style="text-align: center !important;">
+                  En&nbsp;Camino
+              </div>
+          </ion-col>
+          <ion-col>
+              <div class="IconoTimeLine" [ngClass]="{'colorVerde': obj_PedidoDetalle.estatusId >= 4}">
+                  <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              <div style="text-align: center !important;">
+                  Entregado
+              </div>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <br>
+  <br>
+  <ion-grid>
+      <ion-row>
+          <ion-col>
+              <strong style="font-size: 18px;">Dirección de entrega</strong>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <strong>Empresa: </strong>{{ obj_PedidoDetalle.nombreEmpresa }}
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <strong>Dirección: </strong>{{ obj_PedidoDetalle.direccionEmpresa }}
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <strong>No. guia: </strong>{{ obj_PedidoDetalle.Guia }}
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <br>
+  <ion-grid>
+      <ion-row>
+          <ion-col style="text-align: center;">
+              ¿Tuviste algun problema con tu pedido?
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col style="text-align: center;">
+              <a href="tel:8181818181">Ponte en contacto con nosotros</a>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
